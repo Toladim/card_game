@@ -1,0 +1,386 @@
+[gd_scene load_steps=10 format=3 uid="uid://csnl6p3qx5jt5"]
+
+[ext_resource type="Script" path="res://scripts/cardUI/class/card_UI.gd" id="1_dj4ta"]
+[ext_resource type="Texture2D" uid="uid://jtgblbyrfpkn" path="res://icon.svg" id="2_2h7oq"]
+[ext_resource type="FontFile" uid="uid://bh2gj03hg6v4r" path="res://media/themes/neon-wave-theme/polentical_neon/Polentical Neon Regular.ttf" id="3_o6dtr"]
+[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_state_machine.gd" id="4_uvqbn"]
+[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_base_state.gd" id="5_qa2pj"]
+[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_clicked_state.gd" id="6_frdd8"]
+[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_dragging_state.gd" id="7_31u0a"]
+[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_released_state.gd" id="8_48bdw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8os7p"]
+size = Vector2(240, 320)
+
+[node name="CardUI" type="Control"]
+custom_minimum_size = Vector2(240, 320)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 320.0
+script = ExtResource("1_dj4ta")
+metadata/_edit_use_anchors_ = true
+
+[node name="top_background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(240, 200)
+layout_mode = 2
+offset_right = 120.0
+offset_bottom = 160.0
+texture = ExtResource("2_2h7oq")
+expand_mode = 1
+
+[node name="TopVBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="top_header" type="HBoxContainer" parent="TopVBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="card_cost" type="Control" parent="TopVBoxContainer/top_header"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="card_cost_background" type="TextureRect" parent="TopVBoxContainer/top_header/card_cost"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("2_2h7oq")
+expand_mode = 1
+
+[node name="card_cost_label" type="Label" parent="TopVBoxContainer/top_header/card_cost"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="card_name" type="Control" parent="TopVBoxContainer/top_header"]
+custom_minimum_size = Vector2(140, 40)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TopVBoxContainer/top_header/card_name"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_right = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="card_name_background" type="TextureRect" parent="TopVBoxContainer/top_header/card_name/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_2h7oq")
+expand_mode = 1
+
+[node name="card_name_label" type="Label" parent="TopVBoxContainer/top_header/card_name/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 14
+text = "sample_text"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="card_class" type="Control" parent="TopVBoxContainer/top_header"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="card_class_background2" type="TextureRect" parent="TopVBoxContainer/top_header/card_class"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+size_flags_vertical = 0
+texture = ExtResource("2_2h7oq")
+expand_mode = 1
+
+[node name="card_class_label" type="Label" parent="TopVBoxContainer/top_header/card_class"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="main" type="VBoxContainer" parent="TopVBoxContainer"]
+layout_mode = 2
+
+[node name="main_texture" type="Control" parent="TopVBoxContainer/main"]
+custom_minimum_size = Vector2(200, 145)
+layout_mode = 2
+
+[node name="card_main_texture" type="TextureRect" parent="TopVBoxContainer/main/main_texture"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 0
+offset_left = 10.0
+offset_right = 230.0
+offset_bottom = 140.0
+texture = ExtResource("2_2h7oq")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopVBoxContainer/main/main_texture"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="TopVBoxContainer/main/main_texture/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 5
+
+[node name="card_attack" type="Control" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="card_attack_background" type="TextureRect" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer/card_attack"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2h7oq")
+expand_mode = 1
+
+[node name="card_attack_label" type="Label" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer/card_attack"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 22
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="TopVBoxContainer/main/main_texture/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="card_deffence" type="Control" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="card_deffence_background" type="TextureRect" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer2/VBoxContainer/card_deffence"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2h7oq")
+expand_mode = 1
+
+[node name="card_deffence_label" type="Label" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer2/VBoxContainer/card_deffence"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 22
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="card_health" type="Control" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="card_health_background" type="TextureRect" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer2/VBoxContainer/card_health"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2h7oq")
+expand_mode = 1
+
+[node name="card_health_label" type="Label" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer2/VBoxContainer/card_health"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 22
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="bottom_background" type="TextureRect" parent="."]
+layout_mode = 2
+offset_top = 192.0
+offset_right = 240.0
+offset_bottom = 320.0
+size_flags_vertical = 3
+texture = ExtResource("2_2h7oq")
+
+[node name="BottomVBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(240, 120)
+layout_mode = 2
+offset_top = 195.0
+offset_right = 240.0
+offset_bottom = 315.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="bottom_header" type="TextureRect" parent="BottomVBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture = ExtResource("2_2h7oq")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="BottomVBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 10
+
+[node name="main_card_label" type="Label" parent="BottomVBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="card_type" type="Control" parent="."]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+anchors_preset = 0
+offset_top = 193.0
+offset_right = 240.0
+offset_bottom = 207.0
+
+[node name="MarginContainer" type="MarginContainer" parent="card_type"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 2
+
+[node name="card_type_background" type="TextureRect" parent="card_type/MarginContainer"]
+custom_minimum_size = Vector2(120, 12)
+layout_mode = 2
+texture = ExtResource("2_2h7oq")
+expand_mode = 1
+
+[node name="card_type_label" type="Label" parent="card_type/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_o6dtr")
+theme_override_font_sizes/font_size = 10
+text = "Sample_text"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DropPointDetector" type="Area2D" parent="."]
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
+visible = false
+position = Vector2(120, 160)
+shape = SubResource("RectangleShape2D_8os7p")
+
+[node name="Debug" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Debug"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.74902)
+
+[node name="debug_state" type="Label" parent="Debug"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.0
+offset_top = -60.0
+offset_right = 73.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sample_debug_text"
+
+[node name="CardStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("4_uvqbn")
+initial_state = NodePath("CardBaseState")
+
+[node name="CardBaseState" type="Node" parent="CardStateMachine"]
+script = ExtResource("5_qa2pj")
+
+[node name="CardClickedState" type="Node" parent="CardStateMachine"]
+script = ExtResource("6_frdd8")
+state = 1
+
+[node name="CardDraggingState" type="Node" parent="CardStateMachine"]
+script = ExtResource("7_31u0a")
+state = 2
+
+[node name="CardReleasedState" type="Node" parent="CardStateMachine"]
+script = ExtResource("8_48bdw")
+state = 4
