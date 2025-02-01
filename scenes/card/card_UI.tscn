@@ -26,6 +26,7 @@ custom_minimum_size = Vector2(240, 200)
 layout_mode = 2
 offset_right = 120.0
 offset_bottom = 160.0
+mouse_filter = 2
 texture = ExtResource("2_2h7oq")
 expand_mode = 1
 
@@ -37,20 +38,24 @@ anchor_bottom = 1.0
 offset_bottom = -130.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="top_header" type="HBoxContainer" parent="TopVBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="card_cost" type="Control" parent="TopVBoxContainer/top_header"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="card_cost_background" type="TextureRect" parent="TopVBoxContainer/top_header/card_cost"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 offset_right = 20.0
 offset_bottom = 20.0
+mouse_filter = 2
 texture = ExtResource("2_2h7oq")
 expand_mode = 1
 
@@ -69,6 +74,7 @@ vertical_alignment = 1
 [node name="card_name" type="Control" parent="TopVBoxContainer/top_header"]
 custom_minimum_size = Vector2(140, 40)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TopVBoxContainer/top_header/card_name"]
 layout_mode = 1
@@ -79,11 +85,13 @@ offset_left = 5.0
 offset_right = 5.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_bottom = 8
 
 [node name="card_name_background" type="TextureRect" parent="TopVBoxContainer/top_header/card_name/MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("2_2h7oq")
 expand_mode = 1
 
@@ -100,6 +108,7 @@ clip_text = true
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 10
+mouse_filter = 2
 
 [node name="card_class_background2" type="TextureRect" parent="TopVBoxContainer/top_header/card_class"]
 custom_minimum_size = Vector2(40, 40)
@@ -107,6 +116,7 @@ layout_mode = 2
 offset_right = 20.0
 offset_bottom = 20.0
 size_flags_vertical = 0
+mouse_filter = 2
 texture = ExtResource("2_2h7oq")
 expand_mode = 1
 
@@ -124,10 +134,12 @@ vertical_alignment = 1
 
 [node name="main" type="VBoxContainer" parent="TopVBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="main_texture" type="Control" parent="TopVBoxContainer/main"]
 custom_minimum_size = Vector2(200, 145)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="card_main_texture" type="TextureRect" parent="TopVBoxContainer/main/main_texture"]
 custom_minimum_size = Vector2(220, 0)
@@ -135,6 +147,7 @@ layout_mode = 0
 offset_left = 10.0
 offset_right = 230.0
 offset_bottom = 140.0
+mouse_filter = 2
 texture = ExtResource("2_2h7oq")
 expand_mode = 1
 
@@ -146,11 +159,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/separation = 20
 
 [node name="MarginContainer" type="MarginContainer" parent="TopVBoxContainer/main/main_texture/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 theme_override_constants/margin_left = 5
 
 [node name="card_attack" type="Control" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer"]
@@ -158,6 +173,7 @@ custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
+mouse_filter = 2
 
 [node name="card_attack_background" type="TextureRect" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer/card_attack"]
 custom_minimum_size = Vector2(40, 40)
@@ -167,6 +183,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_2h7oq")
 expand_mode = 1
 
@@ -185,17 +202,20 @@ vertical_alignment = 1
 [node name="MarginContainer2" type="MarginContainer" parent="TopVBoxContainer/main/main_texture/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 theme_override_constants/margin_right = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer2"]
 layout_mode = 2
 size_flags_vertical = 8
+mouse_filter = 2
 
 [node name="card_deffence" type="Control" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer2/VBoxContainer"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
+mouse_filter = 2
 
 [node name="card_deffence_background" type="TextureRect" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer2/VBoxContainer/card_deffence"]
 layout_mode = 1
@@ -204,6 +224,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_2h7oq")
 expand_mode = 1
 
@@ -224,6 +245,7 @@ custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
+mouse_filter = 2
 
 [node name="card_health_background" type="TextureRect" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer2/VBoxContainer/card_health"]
 layout_mode = 1
@@ -232,6 +254,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_2h7oq")
 expand_mode = 1
 
@@ -253,6 +276,7 @@ offset_top = 192.0
 offset_right = 240.0
 offset_bottom = 320.0
 size_flags_vertical = 3
+mouse_filter = 2
 texture = ExtResource("2_2h7oq")
 
 [node name="BottomVBoxContainer" type="VBoxContainer" parent="."]
@@ -264,10 +288,12 @@ offset_bottom = 315.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
+mouse_filter = 2
 
 [node name="bottom_header" type="TextureRect" parent="BottomVBoxContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("2_2h7oq")
 expand_mode = 1
 
@@ -275,6 +301,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 15
@@ -296,6 +323,7 @@ anchors_preset = 0
 offset_top = 193.0
 offset_right = 240.0
 offset_bottom = 207.0
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="card_type"]
 custom_minimum_size = Vector2(0, 12)
@@ -305,6 +333,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 60
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 60
@@ -313,6 +342,7 @@ theme_override_constants/margin_bottom = 2
 [node name="card_type_background" type="TextureRect" parent="card_type/MarginContainer"]
 custom_minimum_size = Vector2(120, 12)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("2_2h7oq")
 expand_mode = 1
 
@@ -325,6 +355,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DropPointDetector" type="Area2D" parent="."]
+unique_name_in_owner = true
 collision_mask = 2
 monitorable = false
 
@@ -340,14 +371,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="Debug"]
+[node name="Color" type="ColorRect" parent="Debug"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.486275)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(1, 1, 1, 0.74902)
 
 [node name="debug_state" type="Label" parent="Debug"]
@@ -365,8 +400,11 @@ offset_bottom = -37.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Sample_debug_text"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CardStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+unique_name_in_owner = true
 script = ExtResource("4_uvqbn")
 initial_state = NodePath("CardBaseState")
 
@@ -384,3 +422,7 @@ state = 2
 [node name="CardReleasedState" type="Node" parent="CardStateMachine"]
 script = ExtResource("8_48bdw")
 state = 4
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

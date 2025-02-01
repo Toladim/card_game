@@ -34,13 +34,7 @@ offset_right = 608.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Card" parent="BattleUI/Hand" instance=ExtResource("2_erya3")]
-layout_mode = 2
-
 [node name="Card5" parent="BattleUI/Hand" instance=ExtResource("2_erya3")]
-layout_mode = 2
-
-[node name="Card2" parent="BattleUI/Hand" instance=ExtResource("2_erya3")]
 layout_mode = 2
 
 [node name="Card3" parent="BattleUI/Hand" instance=ExtResource("2_erya3")]
