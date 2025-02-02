@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://csnl6p3qx5jt5"]
 
-[ext_resource type="Script" path="res://scripts/cardUI/class/card_UI.gd" id="1_dj4ta"]
-[ext_resource type="Texture2D" uid="uid://jtgblbyrfpkn" path="res://icon.svg" id="2_2h7oq"]
-[ext_resource type="FontFile" uid="uid://bh2gj03hg6v4r" path="res://media/themes/neon-wave-theme/polentical_neon/Polentical Neon Regular.ttf" id="3_o6dtr"]
-[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_state_machine.gd" id="4_uvqbn"]
-[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_base_state.gd" id="5_qa2pj"]
-[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_clicked_state.gd" id="6_frdd8"]
-[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_dragging_state.gd" id="7_31u0a"]
-[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_released_state.gd" id="8_48bdw"]
+[ext_resource type="Script" path="res://scripts/cardUI/class/card_UI.gd" id="1_ld1id"]
+[ext_resource type="Texture2D" uid="uid://jtgblbyrfpkn" path="res://icon.svg" id="2_u7m1t"]
+[ext_resource type="FontFile" uid="uid://bh2gj03hg6v4r" path="res://media/themes/neon-wave-theme/polentical_neon/Polentical Neon Regular.ttf" id="3_pcjhb"]
+[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_state_machine.gd" id="4_mr6wx"]
+[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_base_state.gd" id="5_oahvl"]
+[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_clicked_state.gd" id="6_dy4v4"]
+[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_dragging_state.gd" id="7_sls2h"]
+[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_released_state.gd" id="8_nyfi3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8os7p"]
 size = Vector2(240, 320)
@@ -18,7 +18,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 240.0
 offset_bottom = 320.0
-script = ExtResource("1_dj4ta")
+script = ExtResource("1_ld1id")
 metadata/_edit_use_anchors_ = true
 
 [node name="top_background" type="TextureRect" parent="."]
@@ -27,7 +27,7 @@ layout_mode = 2
 offset_right = 120.0
 offset_bottom = 160.0
 mouse_filter = 2
-texture = ExtResource("2_2h7oq")
+texture = ExtResource("2_u7m1t")
 expand_mode = 1
 
 [node name="TopVBoxContainer" type="VBoxContainer" parent="."]
@@ -56,7 +56,7 @@ layout_mode = 2
 offset_right = 20.0
 offset_bottom = 20.0
 mouse_filter = 2
-texture = ExtResource("2_2h7oq")
+texture = ExtResource("2_u7m1t")
 expand_mode = 1
 
 [node name="card_cost_label" type="Label" parent="TopVBoxContainer/top_header/card_cost"]
@@ -92,7 +92,7 @@ theme_override_constants/margin_bottom = 8
 [node name="card_name_background" type="TextureRect" parent="TopVBoxContainer/top_header/card_name/MarginContainer"]
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("2_2h7oq")
+texture = ExtResource("2_u7m1t")
 expand_mode = 1
 
 [node name="card_name_label" type="Label" parent="TopVBoxContainer/top_header/card_name/MarginContainer"]
@@ -117,7 +117,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 size_flags_vertical = 0
 mouse_filter = 2
-texture = ExtResource("2_2h7oq")
+texture = ExtResource("2_u7m1t")
 expand_mode = 1
 
 [node name="card_class_label" type="Label" parent="TopVBoxContainer/top_header/card_class"]
@@ -148,7 +148,7 @@ offset_left = 10.0
 offset_right = 230.0
 offset_bottom = 140.0
 mouse_filter = 2
-texture = ExtResource("2_2h7oq")
+texture = ExtResource("2_u7m1t")
 expand_mode = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TopVBoxContainer/main/main_texture"]
@@ -184,7 +184,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_2h7oq")
+texture = ExtResource("2_u7m1t")
 expand_mode = 1
 
 [node name="card_attack_label" type="Label" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer/card_attack"]
@@ -225,7 +225,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_2h7oq")
+texture = ExtResource("2_u7m1t")
 expand_mode = 1
 
 [node name="card_deffence_label" type="Label" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer2/VBoxContainer/card_deffence"]
@@ -255,7 +255,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_2h7oq")
+texture = ExtResource("2_u7m1t")
 expand_mode = 1
 
 [node name="card_health_label" type="Label" parent="TopVBoxContainer/main/main_texture/HBoxContainer/MarginContainer2/VBoxContainer/card_health"]
@@ -277,7 +277,7 @@ offset_right = 240.0
 offset_bottom = 320.0
 size_flags_vertical = 3
 mouse_filter = 2
-texture = ExtResource("2_2h7oq")
+texture = ExtResource("2_u7m1t")
 
 [node name="BottomVBoxContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(240, 120)
@@ -294,7 +294,7 @@ mouse_filter = 2
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("2_2h7oq")
+texture = ExtResource("2_u7m1t")
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="BottomVBoxContainer"]
@@ -343,12 +343,12 @@ theme_override_constants/margin_bottom = 2
 custom_minimum_size = Vector2(120, 12)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("2_2h7oq")
+texture = ExtResource("2_u7m1t")
 expand_mode = 1
 
 [node name="card_type_label" type="Label" parent="card_type/MarginContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_o6dtr")
+theme_override_fonts/font = ExtResource("3_pcjhb")
 theme_override_font_sizes/font_size = 10
 text = "Sample_text"
 horizontal_alignment = 1
@@ -405,22 +405,22 @@ vertical_alignment = 1
 
 [node name="CardStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 unique_name_in_owner = true
-script = ExtResource("4_uvqbn")
+script = ExtResource("4_mr6wx")
 initial_state = NodePath("CardBaseState")
 
 [node name="CardBaseState" type="Node" parent="CardStateMachine"]
-script = ExtResource("5_qa2pj")
+script = ExtResource("5_oahvl")
 
 [node name="CardClickedState" type="Node" parent="CardStateMachine"]
-script = ExtResource("6_frdd8")
+script = ExtResource("6_dy4v4")
 state = 1
 
 [node name="CardDraggingState" type="Node" parent="CardStateMachine"]
-script = ExtResource("7_31u0a")
+script = ExtResource("7_sls2h")
 state = 2
 
 [node name="CardReleasedState" type="Node" parent="CardStateMachine"]
-script = ExtResource("8_48bdw")
+script = ExtResource("8_nyfi3")
 state = 4
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

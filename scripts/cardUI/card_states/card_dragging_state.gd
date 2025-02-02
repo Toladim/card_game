@@ -4,7 +4,9 @@ extends CardState
 func enter() -> void:
 	var ui_layer = get_tree().get_first_node_in_group("ui_layer")
 	if ui_layer:
+		print(ui_layer.get_parent())
 		card_ui.reparent(ui_layer)
+		print(ui_layer.get_parent())
 	
 	card_ui.color.color = Color.AQUA
 	card_ui.debug_state.text = "DRAGGING"
