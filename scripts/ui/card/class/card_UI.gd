@@ -2,6 +2,8 @@ class_name CardUI extends Control
 
 signal reparent_requested(which_card_ui:CardUI)
 
+@export var card:Card
+
 #DEBUG
 @onready var debug_state:Label = %debug_state
 @onready var color:ColorRect = %Color

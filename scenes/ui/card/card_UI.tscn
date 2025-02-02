@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://csnl6p3qx5jt5"]
 
-[ext_resource type="Script" path="res://scripts/cardUI/class/card_UI.gd" id="1_ld1id"]
+[ext_resource type="Script" path="res://scripts/ui/card/class/card_UI.gd" id="1_ld1id"]
 [ext_resource type="Texture2D" uid="uid://jtgblbyrfpkn" path="res://icon.svg" id="2_u7m1t"]
 [ext_resource type="FontFile" uid="uid://bh2gj03hg6v4r" path="res://media/themes/neon-wave-theme/polentical_neon/Polentical Neon Regular.ttf" id="3_pcjhb"]
-[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_state_machine.gd" id="4_mr6wx"]
-[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_base_state.gd" id="5_oahvl"]
-[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_clicked_state.gd" id="6_dy4v4"]
-[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_dragging_state.gd" id="7_sls2h"]
-[ext_resource type="Script" path="res://scripts/cardUI/card_states/card_released_state.gd" id="8_nyfi3"]
+[ext_resource type="Script" path="res://scripts/ui/card/card_states/card_state_machine.gd" id="4_mr6wx"]
+[ext_resource type="Script" path="res://scripts/ui/card/card_states/card_base_state.gd" id="5_oahvl"]
+[ext_resource type="Script" path="res://scripts/ui/card/card_states/card_clicked_state.gd" id="6_dy4v4"]
+[ext_resource type="Script" path="res://scripts/ui/card/card_states/card_dragging_state.gd" id="7_sls2h"]
+[ext_resource type="Script" path="res://scripts/ui/card/card_states/card_released_state.gd" id="8_nyfi3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8os7p"]
 size = Vector2(240, 320)
