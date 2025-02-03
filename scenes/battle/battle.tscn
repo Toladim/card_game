@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhpu0p3hn4mbc"]
+[gd_scene load_steps=6 format=3 uid="uid://dhpu0p3hn4mbc"]
 
 [ext_resource type="Texture2D" uid="uid://jtgblbyrfpkn" path="res://icon.svg" id="1_18k3t"]
+[ext_resource type="Script" path="res://gcard_hand_layout.gd" id="2_5jadm"]
 [ext_resource type="PackedScene" uid="uid://csnl6p3qx5jt5" path="res://scenes/ui/card/card_UI.tscn" id="2_erya3"]
 [ext_resource type="Script" path="res://scenes/ui/hand/class/hand.gd" id="2_jmon5"]
 
@@ -24,6 +25,7 @@ shape = SubResource("RectangleShape2D_ba52m")
 [node name="BattleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]
 
 [node name="Hand" type="HBoxContainer" parent="BattleUI"]
+visible = false
 custom_minimum_size = Vector2(1300, 0)
 anchors_preset = 7
 anchor_left = 0.5
@@ -37,15 +39,132 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 1
 script = ExtResource("2_jmon5")
 metadata/_edit_use_anchors_ = true
 
 [node name="Card4" parent="BattleUI/Hand" instance=ExtResource("2_erya3")]
+modulate = Color(1, 0.352941, 1, 1)
 layout_mode = 2
 
 [node name="Card5" parent="BattleUI/Hand" instance=ExtResource("2_erya3")]
+modulate = Color(0.788235, 1, 0.109804, 1)
 layout_mode = 2
 
 [node name="Card3" parent="BattleUI/Hand" instance=ExtResource("2_erya3")]
 layout_mode = 2
+
+[node name="TestHand" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 784.0
+offset_top = 698.0
+offset_right = 824.0
+offset_bottom = 738.0
+script = ExtResource("2_5jadm")
+dynamic_radius_factor = 360.0
+animation_trans = 5
+
+[node name="Card" parent="TestHand" instance=ExtResource("2_erya3")]
+modulate = Color(1, 0.352941, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -160.0
+offset_right = 120.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card2" parent="TestHand" instance=ExtResource("2_erya3")]
+modulate = Color(1, 0.352941, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -160.0
+offset_right = 120.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card5" parent="TestHand" instance=ExtResource("2_erya3")]
+modulate = Color(1, 0.352941, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -160.0
+offset_right = 120.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card6" parent="TestHand" instance=ExtResource("2_erya3")]
+modulate = Color(1, 0.352941, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -160.0
+offset_right = 120.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card7" parent="TestHand" instance=ExtResource("2_erya3")]
+modulate = Color(1, 0.352941, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -160.0
+offset_right = 120.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card3" parent="TestHand" instance=ExtResource("2_erya3")]
+modulate = Color(1, 0.352941, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -160.0
+offset_right = 120.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card4" parent="TestHand" instance=ExtResource("2_erya3")]
+modulate = Color(1, 0.352941, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -160.0
+offset_right = 120.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
