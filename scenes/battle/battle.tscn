@@ -56,12 +56,16 @@ layout_mode = 2
 [node name="TestHand" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 784.0
-offset_top = 698.0
-offset_right = 824.0
-offset_bottom = 738.0
+offset_left = 786.0
+offset_top = 733.0
+offset_right = 826.0
+offset_bottom = 773.0
+scale = Vector2(0.8, 0.8)
 script = ExtResource("2_5jadm")
 dynamic_radius_factor = 360.0
+hover_padding = 192.0
+hovered_scale = Vector2(1.4, 1.4)
+hover_relative_position = Vector2(-48, -180)
 animation_trans = 5
 
 [node name="Card" parent="TestHand" instance=ExtResource("2_erya3")]
@@ -72,12 +76,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = -160.0
-offset_right = 120.0
-offset_bottom = 160.0
+offset_left = -583.164
+offset_top = 24.322
+offset_right = -343.164
+offset_bottom = 344.322
 grow_horizontal = 2
 grow_vertical = 2
+rotation = -0.15708
 
 [node name="Card2" parent="TestHand" instance=ExtResource("2_erya3")]
 modulate = Color(1, 0.352941, 1, 1)
@@ -87,84 +92,137 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = -160.0
-offset_right = 120.0
-offset_bottom = 160.0
+offset_left = -458.73
+offset_top = 6.83374
+offset_right = -218.73
+offset_bottom = 326.834
 grow_horizontal = 2
 grow_vertical = 2
+rotation = -0.122173
 
 [node name="Card5" parent="TestHand" instance=ExtResource("2_erya3")]
-modulate = Color(1, 0.352941, 1, 1)
+modulate = Color(0, 0.623529, 0.807843, 0.607843)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = -160.0
-offset_right = 120.0
-offset_bottom = 160.0
+offset_left = -333.761
+offset_top = -6.30103
+offset_right = -93.7607
+offset_bottom = 313.699
 grow_horizontal = 2
 grow_vertical = 2
+rotation = -0.0872665
 
 [node name="Card6" parent="TestHand" instance=ExtResource("2_erya3")]
-modulate = Color(1, 0.352941, 1, 1)
+modulate = Color(0.348983, 8.93547e-05, 0.352655, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = -160.0
-offset_right = 120.0
-offset_bottom = 160.0
+offset_left = -208.409
+offset_top = -15.0664
+offset_right = 31.5906
+offset_bottom = 304.934
 grow_horizontal = 2
 grow_vertical = 2
+rotation = -0.0523599
 
 [node name="Card7" parent="TestHand" instance=ExtResource("2_erya3")]
-modulate = Color(1, 0.352941, 1, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = -160.0
-offset_right = 120.0
-offset_bottom = 160.0
+offset_left = -82.8287
+offset_top = -19.4517
+offset_right = 157.171
+offset_bottom = 300.548
 grow_horizontal = 2
 grow_vertical = 2
+rotation = -0.0174533
 
 [node name="Card3" parent="TestHand" instance=ExtResource("2_erya3")]
-modulate = Color(1, 0.352941, 1, 1)
+modulate = Color(0.919659, 0.58291, 0.34366, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = -160.0
-offset_right = 120.0
-offset_bottom = 160.0
+offset_left = 42.8287
+offset_top = -19.4517
+offset_right = 282.829
+offset_bottom = 300.548
 grow_horizontal = 2
 grow_vertical = 2
+rotation = 0.0174533
 
 [node name="Card4" parent="TestHand" instance=ExtResource("2_erya3")]
-modulate = Color(1, 0.352941, 1, 1)
+modulate = Color(0.231373, 0.352941, 1, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = -160.0
-offset_right = 120.0
-offset_bottom = 160.0
+offset_left = 168.409
+offset_top = -15.0664
+offset_right = 408.409
+offset_bottom = 304.934
 grow_horizontal = 2
 grow_vertical = 2
+rotation = 0.0523599
+
+[node name="Card8" parent="TestHand" instance=ExtResource("2_erya3")]
+modulate = Color(0.704864, 0.681639, 0.520186, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 293.761
+offset_top = -6.30103
+offset_right = 533.761
+offset_bottom = 313.699
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0872665
+
+[node name="Card9" parent="TestHand" instance=ExtResource("2_erya3")]
+modulate = Color(0.421966, 0.762798, 0.519617, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 418.73
+offset_top = 6.83374
+offset_right = 658.73
+offset_bottom = 326.834
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.122173
+
+[node name="Card10" parent="TestHand" instance=ExtResource("2_erya3")]
+modulate = Color(0.822698, 0.632333, 0.458391, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 543.164
+offset_top = 24.322
+offset_right = 783.164
+offset_bottom = 344.322
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.15708
